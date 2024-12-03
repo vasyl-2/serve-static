@@ -9,4 +9,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('get-data')
+  async getData(): Promise<{ prop: string }> {
+    console.log('ROUTE______________________________')
+    return await this.appService.getData();
+  }
 }
